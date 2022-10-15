@@ -1,0 +1,179 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html{
+    box-sizing:border-box;
+	/* font-family: 'Georgia', serif; */
+}
+
+body{
+	background-color: hsl(30, 38%, 92%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+.product-preview{
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	border-radius: 20px;
+	width: 380px;
+}
+
+.product-preview img{
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	height: auto;
+}
+
+.product-details{
+	padding: 20px;
+}
+
+.product-description p{
+	text-transform:uppercase;
+	letter-spacing: 2px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	color: rgb(155, 147, 147);
+}
+
+.product-description p:last-child{
+	text-transform: none;
+	letter-spacing: normal;
+	line-height: 1.5rem;
+	color: rgb(91, 85, 85);
+	margin: 25px 0;
+}
+
+.product-description h1{
+	font-family: 'Fraunces', serif;
+	font-weight: 700;
+	margin-top: 25px;
+	font-size: 30px;
+}
+
+.product-price {
+	display: flex;
+	flex-direction: row;
+	/* justify-content: space-around; */
+	align-items: center;
+}
+.product-price h1{
+	margin-right: 25px;
+	font-family: 'Fraunces', serif;
+	font-weight: 700;
+	color: rgb(0, 118, 49);
+	font-size: 30px;
+}
+
+.product-price p{
+	text-decoration: line-through;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	color:rgb(155, 147, 147);
+}
+
+.product-checkout{
+    border-radius: 10px;
+    padding: 15px 35px;
+    margin: 25px 0;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+    transition: background-color 200ms ease-in-out;
+	color: white;
+    background-color: rgb(9, 132, 60);
+    border: none;
+}
+
+.product-checkout:hover, .product-checkout:focus {
+    color: white;
+    background-color: rgb(15, 87, 45)
+}
+
+.product-checkout p{
+	margin-left: 10px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+@media (min-width: 900px){
+	.product-preview{
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		background-color: white;
+		width: 740px;
+	}
+	
+	.product-preview img{
+		border-top-left-radius: 20px;
+		border-bottom-left-radius: 20px;
+		border-top-right-radius: 0;
+		height: 450px;
+		width: 400px;
+	}
+	
+	.product-details{
+		padding: 20px;
+		width: 380px;
+	} 
+}
+
+.attribution {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+}
+
+.attribution a{
+	text-decoration: none;
+}
